@@ -1,0 +1,5 @@
+gcc -Wall -Wextra -o diskput diskput.c
+diskput.c: In function ‘find_directory_entry’:
+diskput.c:322:27: warning: comparison of integer expressions of different signedness: ‘int’ and ‘long unsigned int’ [-Wsign-compare]
+  322 |         for (int i = 0; i < bs.sector_size / sizeof(DirectoryEntry); i++) {
+      |                           ^
