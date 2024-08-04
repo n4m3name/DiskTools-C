@@ -1,6 +1,6 @@
 # DiskTools-c
 
-FAT12 File System Utilities
+FAT12 File System Utilities written in C
 
 This package contains four utilities for working with FAT12 file system images:
 
@@ -38,13 +38,43 @@ All utilities are designed to work with FAT12 file system images and handle vari
 
 These tools provide a comprehensive set of operations for examining and modifying FAT12 file systems, useful for both educational purposes and practical file system management tasks.
 
-Compilation:
+**Compilation:**  
 Use the provided Makefile to compile all utilities:
     `make`
 The compiled files can be removed using `make clean`
 
-## Recommended usage:
-The repository includes the following disks (in the TestDisks folder) for testing:
-- disk1.IMA
-- disk2.IMA
-- disk3.IMA
+**Recommended usage:**  
+The repository includes the following disks (in the TestDisks folder) for testing, which were given in the course notes for CSC360: Operating Systems:
+
+1. disk1.IMA:
+   ```
+   .
+   ├── ans1.pdf
+   ├── Icebergs.tex
+   └── Reminder.txt
+   ```
+
+2. disk2.IMA:
+   ```
+   .
+   ├── acs.c
+   ├── fat12.pdf
+   └── SUB1
+       └── input1.txt
+   ```
+
+3. disk3.IMA:
+   ```
+   .
+   ├── Figure1.jpg
+   ├── SUB1
+   │   └── SUBSUB1
+   │       ├── 2f11.jpg
+   │       └── SUBSUB11
+   │           └── readme.txt
+   └── SUB2
+   ```
+
+The most straightforward way to test is to first copy one of the test files to a .IMA file in the project folder, i.e. `cp TestDisks/disk<x>.IMA test.IMA` and proceed to run the programs on `test.IMA`, i.e. `disk`; The code was written using these .IMA files for testing.
+
+Also included is `foo.txt`, a simple text file for use with `diskput.c` and `diskget.c`. The code for these files was also tested using `Figure1.jpg` from disk3.IMA.
